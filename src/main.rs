@@ -65,7 +65,7 @@ fn print_grid(x: u16, y: u16) -> io::Result<()> {
     for i in 0..=HEIGHT {
         for j in 0..=WIDTH {
             if i == x && (j == y || j == y + 1) {
-                io::stdout().execute(style::PrintStyledContent(" ".on_red()))?;
+                io::stdout().execute(style::PrintStyledContent(" ".on_dark_red()))?;
             } else {
                 io::stdout().execute(style::PrintStyledContent(" ".on_dark_green()))?;
             }
